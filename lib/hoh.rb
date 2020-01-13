@@ -30,33 +30,8 @@
 #   sub_category: nil
 }# 
 
-naming_system = {
-  
-  :label=> "Kingdom",
-  :sub_category=> {
-     :label=> "Phylum",
-     :sub_category=> {
-       :label=> "Class"
-      }
-},
-{
-   :label=> "Order"
-},
-{
- :label=> "Family",
-   :sub_category=> {
-     :label=> "Genus",
-   }
- },
- {
-:label=> "Species",
-:sub_category=> nil
-}
-}
 
-naming_system[:sub_category][:sub_category][:sub_category][:label]
-
-# def naming_system
+ def naming_system
 #     Kingdom
 #     Phylum
 #     Class
@@ -66,5 +41,19 @@ naming_system[:sub_category][:sub_category][:sub_category][:label]
 #     Species
 #   # So, if we have the "Kingdom" node we should be able to "tunnel" into the
 #   # HoH all the way to Species!
-
-# end
+{
+    label: "Kingdom",
+    sub_category: {
+      label: "Phylum",
+      sub_category: {
+        label: "Class",
+        sub_category: {
+          label: "Order",
+          sub_category: {
+            label: "Family",
+            sub_category: {
+              label: "Genus",
+              sub_category: {
+                label: "Species",
+                sub_category: nil } } } } } } }
+end
